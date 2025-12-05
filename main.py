@@ -14,6 +14,9 @@ Output: MP4 video file saved to disk.
 import os
 import textwrap
 
+os.environ["DISABLE_TF"] = "1"
+os.environ["TRANSFORMERS_NO_TF"] = "1"
+
 import torch
 from diffusers import DiffusionPipeline
 from diffusers.utils import export_to_video
